@@ -1,8 +1,20 @@
+import { useEffect, useState } from 'react';
 import './App.css';
 import Contact from './components/Contact';
 import Quiz from './components/Quiz';
+import useLocalStorage from './hooks/useLocalStorage';
 
 function App() {
+  const [storedValue, setValue] = useLocalStorage('datosUsuarios', []);
+  const [total, setTotal] = useState(0)
+  const [promedio, setPromedio] = useState(0)
+
+  useEffect(() => {
+    storedValue.forEach((el) => {
+      setTotal(prev => prev + el.resultado)
+    })
+  },[storedValue])
+
   return (
     <div className="App w-4/5 mx-auto my-8">
       <section className='border-b border-b-black pb-8'>
@@ -41,7 +53,7 @@ function App() {
 
 
 
-      <section>
+      <section className='border-b border-b-black pb-10'>
         <h2 className='text-3xl m-5 mt-12'>¿Qué es la salud mental?</h2>
         <p className='text-left'>La salud mental se refiere al estado emocional, psicológico y social de una persona. Incluye el bienestar emocional, la capacidad de manejar el estrés, las relaciones interpersonales saludables y la capacidad de tomar decisiones. La salud mental es fundamental para el funcionamiento diario y la calidad de vida.</p>
         <p className='text-left'>Aqui hay algunas razones de la importancia de la salud mental:</p>
@@ -53,6 +65,10 @@ function App() {
           <li className='my-3'>5. Autocuidado: Mantener una buena salud mental implica prácticas de autocuidado, como el manejo del estrés, el descanso adecuado y la atención a las necesidades emocionales.</li>
           <li className='my-3'>6. Prevención de trastornos mentales: La detección temprana y el tratamiento adecuado son clave para abordar problemas antes de que se intensifiquen.</li>
         </ul>
+      </section>
+
+      <section>
+        <p>Total de personas que realizaron el cuestionario: {storedValue.length}</p>
       </section>
     </div>
   );

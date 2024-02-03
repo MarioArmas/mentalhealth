@@ -26,7 +26,7 @@ export default function Quiz() {
 
   useEffect(() => {
     if (showScore) {
-      setValue([...storedValue, { "resultado": score }])
+      setValue([...storedValue, { "resultado": score, "id": storedValue.length + 1 }])
     }
   },[showScore])
 
