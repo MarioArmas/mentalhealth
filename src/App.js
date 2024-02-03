@@ -1,5 +1,6 @@
 import './App.css';
 import Contact from './components/Contact';
+import Quiz from './components/Quiz';
 
 function App() {
   return (
@@ -8,16 +9,10 @@ function App() {
         <h1 className='text-3xl m-5 font-bold'>Mental Health</h1>
         <h2 className='text-xl text-left'>No estás seguro de si necesitas ayuda profesional.</h2>
         <p className='text-left'>¿Te sientes un tanto indeciso acerca de tus emociones? ¿Te gustaría realizar un breve cuestionario en línea que te permita autoevaluarte y comprender mejor tu situación actual? Esto te ayudará a tomar decisiones más informadas sobre cuál debería ser tu próximo paso.</p>
-        <a
-          onClick={() => {
-            console.log('hola')
-          }}
-          href="https://clinicasorigen.es/test/test-de-ansiedad/"
-          target='_blank'
-          rel='noreferrer'
-          className='text-cyan-600 hover:border-b hover:border-b-cyan-600'
-        >Realiza tu test aquí</a>
+        <h3 className='font-bold'>Realiza tu test aquí:</h3>
+        <Quiz />
       </section>
+
 
 
       <section className='border-b border-b-black pb-10'>

@@ -1,0 +1,67 @@
+{
+  "questions" : [
+    {
+      "questionText": "En el último mes ¿con qué frecuencia te has encontrado con sensación de ansiedad o angustia?",
+      "answerOptions": [
+          {"answerText": "Ningún día", "isCorrect": true},
+          {"answerText": "Pocos días", "isCorrect": true},
+          {"answerText": "Algunos días", "isCorrect": false},
+          {"answerText": "Casi todos los días", "isCorrect": false}
+      ]
+  },
+  {
+      "questionText": "En el último mes ¿con qué frecuencia has presentado alguno de los siguientes síntomas: taquicardia, tensión, presión en el pecho o en el estómago o dificultad respirar?",
+      "answerOptions": [
+          {"answerText": "Ningún día", "isCorrect": true},
+          {"answerText": "Pocos días", "isCorrect": true},
+          {"answerText": "Algunos días", "isCorrect": false},
+          {"answerText": "Casi todos los días", "isCorrect": false}
+      ]
+  },
+  {
+      "questionText": "En el último mes ¿con qué frecuencia has sentido que tus preocupaciones están constantemente en tu cabeza y no puedes dejar de pensar en ellas?",
+      "answerOptions": [
+          {"answerText": "Ningún día", "isCorrect": true},
+          {"answerText": "Pocos días", "isCorrect": true},
+          {"answerText": "Algunos días", "isCorrect": false},
+          {"answerText": "Casi todos los días", "isCorrect": false}
+      ]
+  },
+  {
+      "questionText": "En el último mes ¿con qué frecuencia has pensado que la ansiedad que tienes está fuera de tu control?",
+      "answerOptions": [
+          {"answerText": "Ningún día", "isCorrect": true},
+          {"answerText": "Pocos días", "isCorrect": true},
+          {"answerText": "Algunos días", "isCorrect": false},
+          {"answerText": "Casi todos los días", "isCorrect": false}
+      ]
+  },
+  {
+      "questionText": "En el último mes, ¿con qué frecuencia tu estado de ánimo te ha limitado para realizar tus actividades diarias?",
+      "answerOptions": [
+          {"answerText": "Ningún día", "isCorrect": true},
+          {"answerText": "Pocos días", "isCorrect": true},
+          {"answerText": "Algunos días", "isCorrect": false},
+          {"answerText": "Casi todos los días", "isCorrect": false}
+      ]
+  },
+  {
+      "questionText": "En el último mes, ¿con qué frecuencia tus hábitos de sueño o de alimentación han sido afectados?",
+      "answerOptions": [
+          {"answerText": "Ningún día", "isCorrect": true},
+          {"answerText": "Pocos días", "isCorrect": true},
+          {"answerText": "Algunos días", "isCorrect": false},
+          {"answerText": "Casi todos los días", "isCorrect": false}
+      ]
+  },
+  {
+      "questionText": "En el último mes, ¿Con qué frecuencia has pensado que lo que te sucede puede causarte daño de alguna manera o perder el control?",
+      "answerOptions": [
+          {"answerText": "Ningún día", "isCorrect": true},
+          {"answerText": "Pocos días", "isCorrect": true},
+          {"answerText": "Algunos días", "isCorrect": false},
+          {"answerText": "Casi todos los días", "isCorrect": false}
+        ]
+  }
+  ]
+}
