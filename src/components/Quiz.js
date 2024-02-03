@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import data from  './data.json';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 export default function Quiz() {
   const questions = data.questions
+  const [storedValue, setValue] = useLocalStorage('datosUsuarios', []);
 
   // Array de objetos que contiene las preguntas y sus respuestas
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
-  const [objetoRecuperado, setObjetoRecuperado] = useState({ usuarios: []})
 
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
@@ -24,17 +25,11 @@ export default function Quiz() {
   };
 
   useEffect(() => {
-    setObjetoRecuperado(JSON.parse(localStorage.getItem('datos de usuarios')))
-  },[])
-
-  useEffect(() => {
-    const objeto = { usuarios: [
-      ...objetoRecuperado.usuarios,
-      { resultado: score }
-    ] };
-    localStorage.setItem('datos de usuarios', JSON.stringify(objeto));
+    if (showScore) {
+      setValue([...storedValue, { "resultado": score }])
+    }
   },[showScore])
-  
+
   return (
     <div className='quiz border border-black'>
       {showScore ? (
