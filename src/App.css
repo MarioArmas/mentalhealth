@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff; /* Fondo blanco */
+  color: #000000; /* Texto negro */
+}
+
 .App {
   text-align: center;
 }
@@ -13,15 +20,17 @@
   }
 }
 
+
+/* Encabezado de la aplicación */
 .App-header {
-  background-color: #282c34;
+  background-color: #61dafb; /* Celeste pastel */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ffffff; /* Texto blanco */
 }
 
 .App-link {
